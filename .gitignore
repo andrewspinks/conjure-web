@@ -1,0 +1,8 @@
+node_modules
+/dist
+.tmp
+.sass-cache
+rspec.xml
+.bundle
+**/*.DS_Store
+.idea/
