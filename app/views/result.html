@@ -14,8 +14,8 @@
           <button class="btn btn-default" ng-click="nextQuestion()" ng-enter="nextQuestion()">done</button>
        </div>
      </div>
-     <div ng-show='currentQuestion.correct'> Correct! </div>
-     <div ng-show='!currentQuestion.correct'> Bummer! Should be {{currentQuestion.answer}} </div>
+     <div class="text-success" ng-show='currentQuestion.correct'> Correct! </div>
+     <div class="text-danger" ng-show='!currentQuestion.correct'> Bummer! Should be {{corrections()}} </div>
    </div>
  </form>
 </div>
