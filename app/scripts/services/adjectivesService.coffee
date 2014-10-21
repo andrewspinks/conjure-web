@@ -6,7 +6,7 @@ angular.module('conjureApp')
     currentQuestionIndex = 0
 
     adjectivesRequest =  ->
-      $http.get('http://127.0.0.1:9393/adjectives')
+      $http.get('http://hidden-eyrie-6211.herokuapp.com//adjectives')
 
     numberOfQuestions: () ->
       adjectives.length
