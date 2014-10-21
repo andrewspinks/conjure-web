@@ -1,6 +1,5 @@
 <div ng-controller="ResultCtrl">
   <form name="form"　class="form-horizontal" role="form">
-    <div class="form-group">
       <div class="row">
         <div class="col-xs-12">
           <h4><label class="control-label" for="answer">{{currentQuestion.title}}</label></h4>
@@ -19,7 +18,6 @@
            <div class="text-success" ng-show='currentQuestion.correct'> Correct! </div>
            <div class="text-danger" ng-show='!currentQuestion.correct'> Bummer! Should be {{corrections()}} </div>
         </div>
-     </div>
    </div>
  </form>
 </div>
