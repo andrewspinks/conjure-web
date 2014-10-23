@@ -1,11 +1,6 @@
 <div ng-controller="QuestionCtrl">
   <form name="form"　class="form-horizontal" role="form">
       <div class="row">
-        <div class="col-xs-12">
-          <h4><label class="control-label" for="answer">{{currentQuestion.title}}</label></h4>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-xs-7 col-md-8">
           <input type="text" autocapitalize="off" autocomplete="off" autocorrect="off"  class="form-control" id="answer" name="answer" ng-model="guess" placeholder="{{currentQuestion.title}}" ng-enter="answer()" required>
         </div>
