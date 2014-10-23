@@ -12,9 +12,12 @@ angular.module('conjureApp')
     numberOfQuestions: () ->
       adjectives.length
 
-    nextQuestion: () ->
+    startSession: () ->
       adjectivesRequest().then (response) ->
-        adjectives = response.data
-        if currentQuestionIndex == (adjectives.length - 1)
-        	return false
-        currentQuestion = adjectives[currentQuestionIndex]
+          adjectives = response.data
+
+    nextQuestion: () ->
+      if currentQuestionIndex == (adjectives.length - 1)
+        return false
+      currentQuestionIndex++
+      currentQuestion = adjectives[currentQuestionIndex]

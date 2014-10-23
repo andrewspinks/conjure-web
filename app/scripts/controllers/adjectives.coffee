@@ -28,10 +28,10 @@ angular.module('conjureApp')
     )
 
     nextQuestion = ->
-      AdjectivesService.nextQuestion().then (question) =>
-        $scope.currentQuestion = question
-        $scope.answerbox = "views/question.html"
-        $scope.numberOfQuestions = AdjectivesService.numberOfQuestions()
+      $scope.currentQuestion = AdjectivesService.nextQuestion()
+      $scope.answerbox = "views/question.html"
 
-    nextQuestion()
+    AdjectivesService.startSession().then (question) ->
+      $scope.numberOfQuestions = AdjectivesService.numberOfQuestions()
+      nextQuestion()
 
