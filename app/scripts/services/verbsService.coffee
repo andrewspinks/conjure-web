@@ -6,8 +6,8 @@ angular.module('conjureApp')
     currentQuestionIndex = 0
 
     verbsRequest =  ->
-      # $http.get('http://hidden-eyrie-6211.herokuapp.com/verbs')
-      $http.get('http://localhost:9393/verbs')
+      $http.get('http://hidden-eyrie-6211.herokuapp.com/verbs')
+      # $http.get('http://localhost:9393/verbs')
 
     numberOfQuestions: () ->
       verbs.length
