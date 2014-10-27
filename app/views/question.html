@@ -1,5 +1,5 @@
 <div ng-controller="QuestionCtrl">
-  <form name="form"　class="form-horizontal" role="form">
+  <form name="form"　class="form-horizontal" role="form" autocomplete="off">
       <div class="row">
         <div class="col-xs-7 col-md-8">
           <input type="text" autocapitalize="off" autocomplete="off" autocorrect="off"  class="form-control" id="answer" name="answer" ng-model="guess" placeholder="{{currentQuestion.title}}" ng-enter="answer()" required>

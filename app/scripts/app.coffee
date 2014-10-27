@@ -17,8 +17,11 @@ angular
       .when '/verbs',
         templateUrl: 'views/verbs.html'
         controller: 'VerbsCtrl'
+      .when '/grammar',
+        templateUrl: 'views/grammar.html'
+        controller: 'GrammarCtrl'
       .otherwise
-        redirectTo: '/verbs'
+        redirectTo: '/grammar'
   .run ($rootScope, $location) ->
     $rootScope.isActive = (state) ->
       state == $location.path()

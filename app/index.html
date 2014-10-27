@@ -40,7 +40,7 @@
                 <li class="dropdown">
                   <li ng-class="{'active': isActive('/adjectives')}"><a href="#/adjectives">Adjectives</a></li>
                   <li ng-class="{'active': isActive('/verbs')}"><a href="#/verbs">Verbs</a></li>
-                  <li><a href="#">Grammar</a></li>
+                  <li ng-class="{'active': isActive('/grannar')}"><a href="#/grammar">Grammar</a></li>
                 </li>
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -98,11 +98,13 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/adjectives.js"></script>
     <script src="scripts/controllers/verbs.js"></script>
+    <script src="scripts/controllers/grammar.js"></script>
     <script src="scripts/directives/enter.js"></script>
     <script src="scripts/controllers/question.js"></script>
     <script src="scripts/controllers/result.js"></script>
     <script src="scripts/services/adjectivesService.js"></script>
     <script src="scripts/services/verbsService.js"></script>
+    <script src="scripts/services/grammarService.js"></script>
     <!-- endbuild -->
   </body>
   </html>
