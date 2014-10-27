@@ -1,13 +1,5 @@
 'use strict'
 
-###*
- # @ngdoc overview
- # @name conjureApp
- # @description
- # # conjureApp
- #
- # Main module of the application.
-###
 angular
   .module('conjureApp', [
     'ngAnimate',
@@ -19,9 +11,14 @@ angular
   ])
   .config ($routeProvider) ->
     $routeProvider
-      .when '/',
+      .when '/adjectives',
         templateUrl: 'views/adjectives.html'
         controller: 'AdjectivesCtrl'
+      .when '/verbs',
+        templateUrl: 'views/verbs.html'
+        controller: 'VerbsCtrl'
       .otherwise
-        redirectTo: '/'
-
+        redirectTo: '/verbs'
+  .run ($rootScope, $location) ->
+    $rootScope.isActive = (state) ->
+      state == $location.path()

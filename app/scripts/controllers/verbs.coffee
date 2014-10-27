@@ -1,12 +1,12 @@
 'use strict'
 
 angular.module('conjureApp')
-  .controller 'AdjectivesCtrl', ($scope, $http, AdjectivesService) ->
+  .controller 'VerbsCtrl', ($scope, $http, VerbsService) ->
     $scope.guess = ""
     $scope.numberCorrect = 0
     $scope.numberIncorrect = 0
     $scope.answerbox = "views/question.html"
-    $scope.adjectives = 'active'
+    $scope.verbs = 'active'
 
     $scope.$on('correctAnswer', (event, args) ->
       console.log("guessed correctly: #{args}")
@@ -29,10 +29,10 @@ angular.module('conjureApp')
     )
 
     nextQuestion = ->
-      $scope.currentQuestion = AdjectivesService.nextQuestion()
+      $scope.currentQuestion = VerbsService.nextQuestion()
       $scope.answerbox = "views/question.html"
 
-    AdjectivesService.startSession().then (question) ->
-      $scope.numberOfQuestions = AdjectivesService.numberOfQuestions()
+    VerbsService.startSession().then (question) ->
+      $scope.numberOfQuestions = VerbsService.numberOfQuestions()
       nextQuestion()
 

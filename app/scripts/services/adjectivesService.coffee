@@ -7,14 +7,14 @@ angular.module('conjureApp')
 
     adjectivesRequest =  ->
       $http.get('http://hidden-eyrie-6211.herokuapp.com/adjectives')
-      # $http.get('http://localhost:5000/adjectives')
+      # $http.get('http://localhost:9393/adjectives')
 
     numberOfQuestions: () ->
       adjectives.length
 
     startSession: () ->
       adjectivesRequest().then (response) ->
-          adjectives = response.data
+          adjectives = response.data.questions
 
     nextQuestion: () ->
       if currentQuestionIndex == (adjectives.length - 1)
